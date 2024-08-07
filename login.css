@@ -1,0 +1,174 @@
+/* CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #e3fbc0, #e8e9df); /* Added a pink-orange gradient background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 900px;
+    background: linear-gradient(to bottom right, #6fe3b8, #6ac4ff); /* Added a soft yellow-white gradient background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-top: 70px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px; /* Added padding */
+}
+
+.description h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 50px; /* Added top margin */
+}
+
+.description p {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Add rounded corners to the video */
+    z-index: 1; /* Ensure video is above the overlay */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Allows interaction with video controls */
+}
+
+.video-container:hover .video-overlay {
+    opacity: 0; /* Hide overlay on hover */
+}
+
+.video-overlay.hidden {
+    opacity: 0;
+}
+
+.video-overlay h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 16px;
+}
+
+.login-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.btn-buyer {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-buyer:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-seller {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.btn-seller:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .description h1 {
+        font-size: 28px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .video-overlay h2 {
+        font-size: 22px;
+    }
+
+    .video-overlay p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+.logo1{
+    margin-top: 300px;
+    height: 55%;
+    width: 55%;
+}
